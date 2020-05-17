@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>button python</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class=" jumbotron container mt-5">
+<form action="/external/" method="post">
+{% csrf_token %}
+
+
+<div class="form-group">
+  <label for="yourcode">Input:</label>
+  <textarea class="form-control" rows="5" name="param" id="yourcode" required></textarea>
+  {{data_external}}
+</div>
+
+
+<label for="output">Output:</label>
+<div class="input-group input-group-lg mb-3">
+  <div class=" border rounded mb-0 py-4 px-2" style="background-color: white; width:100%; height:40%;">
+  	<pre id="output" >{{data1}}</pre> 
+  </div>
+</div>
+
+<button type="submit">Execute</button>
+</form>
+</div>
+</body>
+</html>
+
