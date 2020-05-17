@@ -11,7 +11,7 @@ def output(request):
     return render(request,'home.html',{'data':data})
 def external(request):
     inp= request.POST.get('param')
-    out= run([sys.executable,'C://Users//Vanshika//buttonpython//buttonpython//templates//test.py',inp],shell=False,stdout=PIPE)
+    out= run([sys.executable,'..//buttonpython//buttonpython//templates//test.py',inp],shell=False,stdout=PIPE)
     print(out)
     return render(request,'home.html',{'data1':out.stdout})
 
